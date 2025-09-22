@@ -37,17 +37,32 @@
 <body class="preloader-visible">
   <!-- preloader start -->
   <div class="preloader js-preloader">
-    <div class="preloader__bg"></div>
+      <div class="preloader__bg"></div>
 
-    <div class="preloader__progress desktop">
-      <div class="preloader__progress__inner"></div>
-      <img src="img/general/dynex-logo.mp4" alt="preloader image" class="preloader__img" />
+      <div class="preloader__progress desktop">
+        <div class="preloader__progress__inner"></div>
+        <video
+          src="img/general/dynex-logo.mp4"
+          class="preloader__video"
+          autoplay
+          muted
+          playsinline
+          loop
+        ></video>
+      </div>
+
+      <div class="preloader__progress mobile">
+        <div class="preloader__progress__inner"></div>
+        <video
+          src="img/general/dynex-mobile.mp4"
+          class="preloader__video"
+          autoplay
+          muted
+          playsinline
+          loop
+        ></video>
+      </div>
     </div>
-    <div class="preloader__progress mobile">
-      <div class="preloader__progress__inner"></div>
-      <img src="img/general/dynex-mobile.mp4" alt="preloader image" class="preloader__img" />
-    </div>
-  </div>
   <!-- preloader end -->
 
   <!-- cursor start -->
