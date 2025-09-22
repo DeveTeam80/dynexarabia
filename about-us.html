@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../unpkg.com/leaflet%401.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/vendors.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/section.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/general/favicon.ico" />
+
+    <title>Dynex | About Us</title>
+    <style>
+      body {
+        background-color: #000338;
+      }
+    </style>
+  </head>
+
+  <body class="preloader-visible">
+    <!-- preloader start -->
+    <div class="preloader js-preloader">
+      <div class="preloader__bg"></div>
+
+      <div class="preloader__progress desktop">
+        <div class="preloader__progress__inner"></div>
+        <img
+          src="img/general/dynex-logo.mp4"
+          alt="preloader image"
+          class="preloader__img"
+        />
+      </div>
+      <div class="preloader__progress mobile">
+        <div class="preloader__progress__inner"></div>
+        <img
+          src="img/general/dynex-mobile.mp4"
+          alt="preloader image"
+          class="preloader__img"
+        />
+      </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- cursor start -->
+    <div class="cursor js-cursor">
+      <div class="cursor__wrapper">
+        <div class="cursor__follower js-follower"></div>
+        <div class="cursor__label js-label"></div>
+        <div class="cursor__icon js-icon"></div>
+      </div>
+    </div>
+    <!-- cursor end -->
+
+    <!-- barba container start -->
+    <div class="page-content">
+      <main class="main-content" id="main">
+        <!-- header start -->
+        <header class="header js-header">
+          <div class="header__bar js-header-bar">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-auto z-5 sm:pos-unset js-header-item right-icon">
+                <div class="header__icons">
+                  <div class="header__menu">
+                    <button
+                      type="button"
+                      class="nav-button-open md:d-none js-sidebar-open"
+                    >
+                      <img
+                        src="img/general/favicon.ico"
+                        alt="Logo"
+                        class="hamburger-logo"
+                      />
+                      <i class="fa fa-solid fa-bars fa-2x"></i>
+                    </button>
+
+                    <!-- <button
+                      type="button"
+                      class="nav-button-open d-none md:d-flex js-nav-open"
+                    >
+                      <img
+                        src="img/general/favicon.ico"
+                        alt="Logo"
+                        class="hamburger-logo"
+                      />
+                      <i class="fa fa-solid fa-bars fa-2x"></i>
+                    </button> -->
+
+                    <!-- <button
+                      type="button"
+                      class="nav-button-close d-none md:d-block pointer-events-none js-nav-close"
+                    >
+                      <i class="icon text-white icon-cross"></i>
+                    </button> -->
+                  </div>
+                </div>
+              </div>
+              <!-- New menu icon -->
+              <div
+                class="col-12 col-sm-auto z-5 js-header-item d-flex align-items-center justify-content-between"
+              >
+                <!-- Logo -->
+                <div class="header__item -margin-sm">
+                  <div class="header__logo text-white js-header-logo">
+                    <a href="index.html">
+                      <img src="img/general/logo.png" alt="Logo" />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Mobile Hamburger - visible only on mobile -->
+                <div class="mobile-bars">
+                  <button
+                    type="button"
+                    class="nav-button-open js-nav-open"
+                    aria-label="Open Menu"
+                  >
+                    <img
+                      src="img/general/favicon.ico"
+                      alt="Logo"
+                      class="hamburger-logo"
+                    />
+                    <i class="fa fa-solid fa-bars fa-2x"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="nav-button-close d-none md:d-block pointer-events-none js-nav-close"
+                  >
+                    <i class="icon text-white icon-cross"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="menu js-menu">
+                <div class="mobile__background js-mobile-bg"></div>
+                <div class="menu__container">
+                  <div
+                    class="mobile__back js-nav-list-back pointer-events-none"
+                  >
+                    <a href="index.html">Home</a>
+                  </div>
+                  <ul class="nav js-navList">
+                    <li class="text-white menu-item-has-children">
+                      <a href="index.html">Home</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="index.html#our-story">Our Story</a>
+                        </li>
+                        <li class="nav__submenu_item">
+                          <a href="index.html#services">Our Solutions</a>
+                        </li>
+                        <!-- <li class="nav__submenu_item">
+                        <a data-barba href="index.html">Our Projects</a>
+                      </li> -->
+                        <!-- <li class="nav__submenu_item">
+                        <a data-barba href="index.html">Testimonials</a>
+                      </li> -->
+                        <li class="nav__submenu_item">
+                          <a href="index.html#client">Client & Partners</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children active">
+                      <a href="about-us.html">About Us</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#dynex-story"
+                            >Dynex Arabia Story</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#purpose">Our Purpose</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#core-values"
+                            >Our Core Values</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#leadership-team"
+                            >Leadership Team</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="our-solutions.html">Our Solutions</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="our-solutions.html#solution"
+                            >What we offer</a
+                          >
+                        </li>
+                        <!-- <li class="nav__submenu_item">
+                                                <a data-barba href="our-solutions.html">Infrastructure & Energy
+                                                    Solutions</a>
+                                            </li> -->
+                        <li class="nav__submenu_item">
+                          <a href="our-solutions.html#innovation"
+                            >Innovation & Technology</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="our-projects.html">Our Projects</a>
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="our-projects.html#projects"
+                            >Completed and Ongoing Projects</a
+                          >
+                        </li>
+
+                        <!-- <li class="nav__submenu_item">
+                                                <a data-barba href="our-projects.html">Ongoing Projects</a>
+                                            </li> -->
+
+                        <!-- <li class="nav__submenu_item">
+                                                <a data-barba href="our-projects.html">Statistics</a>
+                                            </li> -->
+
+                        <li class="nav__submenu_item">
+                          <a href="our-projects.html#client"
+                            >Clients & Partners</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="sustainability.html">Sustainability</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="sustainability.html#statistics"
+                            >Statistics</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="sustainability.html#standards"
+                            >Quality Standards</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="sustainability.html#responsibility"
+                            >Responsibilities</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="people-and-culture.html">People and Culture</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="people-and-culture.html#our-people"
+                            >Our People</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="people-and-culture.html#carrer">Careers</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="people-and-culture.html#welfare">Welfare</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="media.html">Media</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="media.html#newsroom">Newsroom</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="media.html">Brand Guideline</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="media.html#library">Photos Library</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white">
+                      <a>العربية</a>
+                      <!-- <div class="lang-btn">
+                        <button><a href="#">العربية</a></button>
+                      </div> -->
+                    </li>
+                    <li class="text-white">
+                      <a href="contact.html" class="contact-btn"> Contact Us</a>
+                    </li>
+                  </ul>
+
+                  <!-- <div class="nav-buttons">
+                  
+                  </div> -->
+                </div>
+
+                <div class="mobile__footer js-mobile-footer">
+                  <div class="mobile__socials">
+                    <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header end -->
+
+        <div class="content-wrapper js-content-wrapper">
+          <!-- banner section -->
+          <section class="page-masthead">
+            <div data-parallax="0.6" class="page-masthead__bg">
+              <div
+                data-parallax-target
+                class="bg-image js-lazy"
+                data-bg="img/dynex-photo-bank/about.jpg"
+              ></div>
+            </div>
+
+            <div class="container">
+              <div class="page-masthead__content">
+                <div
+                  class="row justify-content-between md:justify-content-center align-items-center"
+                >
+                  <div class="col-lg-9 col-md-10">
+                    <div data-anim="slide-up delay-1">
+                      <!-- <div class="page-masthead__back_title">About Us</div> -->
+                      <h1 class="page-masthead__title text-white">About Us</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- About Us -->
+          <section class="layout-pt-lg layout-pb-xl md:pb-64 bg-tough-pink">
+            <div class="container">
+              <div
+                class="row no-gutters align-items-end justify-content-center"
+              >
+                <div class="col-xl-5 col-lg-6">
+                  <div class="about-me">
+                    <div
+                      class="ratio ratio-29:33 bg-image js-lazy"
+                      data-bg="img/dynex-photo-bank/New folder/AI page copy.jpg"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-6">
+                  <div class="ml-minus-col-1 mb-minus-lg md:ml-0 md:mb-0">
+                    <div
+                      class="sectionHeading -left-line bg-beige-dark py-80 px-64 sm:py-48 sm:px-32"
+                    >
+                      <span class="sectionHeading__subtitle text-white"
+                        >About Us</span
+                      >
+                      <h2 class="sectionHeading__title text-white">
+                        We Are DYNEX Arabia
+                      </h2>
+                      <p class="sectionHeading__text text-white mt-20">
+                        We are a 100% Saudi-owned LSTK-EPC contractor. We take
+                        pride in being part of Al-Awael Group, which is owned by
+                        the Al-Rashid Group (RAR). We specialize in constructing
+                        pipelines and ancillary facilities for Saudi Arabia's
+                        vital O&G, energy and water sectors.
+                        <br />
+                        <br />
+                        As a Category 1+ contractor with Saudi Aramco, we are
+                        proud to execute Super Mega Projects that contribute
+                        directly to the Kingdom’s sustainable development.
+                      </p>
+
+                      <!-- <div class="mt-32">
+                      <p class="text-white fw-600">Brooklyn Simmons</p>
+                      <p class="text-white mt-8">CEO - Createx Construction Bureau</p>
+                    </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- About us end -->
+
+          <!-- Dynex Story -->
+          <section
+            class="relative layout-pt-lg layout-pb-lg bg-black d-block sm:d-none"
+            id="dynex-story"
+          >
+            <div class="section-bg-image col-lg-6 px-0">
+              <div
+                class="bg-image js-lazy"
+                data-bg="img/dynex-photo-bank/New folder/DeWatermark.ai_1754950070097.jpeg"
+              ></div>
+            </div>
+
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-4 col-lg-5 offset-lg-7">
+                  <div class="sectionHeading -left-line">
+                    <!-- <span class="sectionHeading__subtitle text-white">EXPLORE US</span> -->
+                    <h2 class="sectionHeading__title mt-16 text-white">
+                      DYNEX Arabia Story
+                    </h2>
+                    <p class="sectionHeading__text mt-24 text-white">
+                      Since inception, we’ve delivered end-to-end EPC solutions
+                      in O&G and water, powered by local expertise, global
+                      standards, and a clear national vision. As part of Saudi
+                      Arabia’s vision, DYNEX aims to capture 44 million tons of
+                      CO₂ annually by 2035.
+                    </p>
+                    <p class="sectionHeading__text mt-24 text-white">
+                      Join us on a journey of innovation, safety, and
+                      excellence, where we empower Saudi talent and engineer
+                      solutions built to last.
+                      <br />
+                      DYNEX Arabia. Bridging a Sustainable Future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Dynex Story End -->
+          <section class="layout-pt-lg layout-pb-xl md:pb-64 bg-tough-pink d-none sm:d-block">
+            <div class="container">
+              <div
+                class="row no-gutters align-items-end justify-content-center"
+              >
+                <div class="col-xl-5 col-lg-6">
+                  <div class="about-me">
+                    <div
+                      class="ratio ratio-29:33 bg-image js-lazy"
+                      data-bg="img/dynex-photo-bank/New folder/DeWatermark.ai_1754950070097.jpeg"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-6">
+                  <div class="ml-minus-col-1 mb-minus-lg md:ml-0 md:mb-0">
+                    <div
+                      class="sectionHeading -left-line bg-beige-dark py-80 px-64 sm:py-48 sm:px-32"
+                    >
+                      <h2 class="sectionHeading__title text-white">
+                        DYNEX Arabia Story
+                      </h2>
+                      <p class="sectionHeading__text text-white mt-20">
+                      Since inception, we’ve delivered end-to-end EPC solutions
+                      in O&G and water, powered by local expertise, global
+                      standards, and a clear national vision. As part of Saudi
+                      Arabia’s vision, DYNEX aims to capture 44 million tons of
+                      CO₂ annually by 2035.
+                      <br />
+                      Join us on a journey of innovation, safety, and
+                      excellence, where we empower Saudi talent and engineer
+                      solutions built to last.
+                      <br />
+                      DYNEX Arabia. Bridging a Sustainable Future.
+                      </p>
+
+                      <!-- <div class="mt-32">
+                      <p class="text-white fw-600">Brooklyn Simmons</p>
+                      <p class="text-white mt-8">CEO - Createx Construction Bureau</p>
+                    </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Purpose Start -->
+          <section
+            class="layout-pt-lg overflow-visible bg-tough-pink pb-100"
+            id="purpose"
+          >
+            <div class="container">
+              <div data-anim-wrap class="row align-items-center">
+                <div class="col-xl-5 col-lg-6 col-md-10">
+                  <div
+                    data-anim-child="slide-right delay-8"
+                    class="sectionHeading -left-line -about pr-12 lg:pr-0"
+                  >
+                    <span class="sectionHeading__subtitle">OUR PURPOSE</span>
+                    <h2 class="sectionHeading__title text-dark">
+                      IT’S NOT JUST WHAT WE BUILD, BUT THE FUTURE WE SHAPE
+                    </h2>
+                    <p class="sectionHeading__text text-dark">
+                      OUR GOAL: TO BE THE LEADING PIPELINE AND ENERGY SOLUTIONS
+                      PROVIDER IN THE MENA REGION
+                    </p>
+                    <p class="sectionHeading__text text-dark">
+                      We are committed to shaping a safer, brighter, and more
+                      sustainable tomorrow. Our purpose drives us to expand into
+                      new markets, deliver cutting-edge contracting solutions,
+                      and empower Saudi talent to lead the region’s progress.
+                      Innovation, safety, and sustainability define how we
+                      build—and why it matters.
+                    </p>
+                    <p class="sectionHeading__text text-dark">
+                      We are more than infrastructure builders—we build talent,
+                      technology, and trust.
+                    </p>
+
+                    <!-- <div class="sectionHeading__button">
+                                        <a data-barba href="#" class="button -md -dark text-white">DISCOVER MORE</a>
+                                    </div> -->
+                  </div>
+                </div>
+
+                <div class="col-xl-7 col-lg-6">
+                  <div class="overlayImgs md:mt-60">
+                    <div
+                      data-anim-child="img-right cover-black"
+                      class="overlayImgs__back"
+                      style="height: 600px; object-fit: contain"
+                    >
+                      <img
+                        src="img/dynex-photo-bank/New folder/shutterstock_2621052327.jpg"
+                        alt="Image"
+                      />
+                    </div>
+
+                    <div
+                      data-anim-child="img-right cover-black delay-3"
+                      class="overlayImgs__front -border"
+                    >
+                      <img
+                        src="img/dynex-photo-bank/New folder/shutterstock_2200638685.jpg"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Purpose End -->
+
+          <section
+            class="layout-pt-lg layout-pb-lg bg-light bg-core"
+            id="core-values"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="sectionHeading -top-line text-center">
+                    <span class="sectionHeading__subtitle_services">
+                      At DYNEX Arabia, people, quality, safety, and integrity
+                      drive our culture and commitment to sustainable practices.
+                    </span>
+                    <h2 class="sectionHeading__title_services">
+                      Our Core Values
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-center y-gap-32 layout-pt-sm">
+                <!-- Card 1 -->
+                <div class="col-lg-6 col-md-6 d-flex">
+                  <div
+                    data-anim="slide-up"
+                    class="service -card -hover w-100 h-100"
+                  >
+                    <div class="service__content -border">
+                      <div class="service__icon">
+                        <i class="fa fa-solid fa-shield fa-2x"></i>
+                      </div>
+                      <h3 class="service__title text-dark mt-20">
+                        Quality & Safety
+                      </h3>
+                      <p class="service__text text-dark">
+                        We are committed to meeting high international
+                        standards. Our ISO 9001:2015 certification reflects our
+                        focus on quality. We prioritize health, safety, and
+                        environmental management to ensure zero incidents on
+                        every project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-6 col-md-6 d-flex">
+                  <div
+                    data-anim="slide-up"
+                    class="service -card -hover w-100 h-100"
+                  >
+                    <div class="service__content -border">
+                      <div class="service__icon">
+                        <i class="fa fa-solid fa-handshake-o fa-2x"></i>
+                      </div>
+                      <h3 class="service__title text-dark mt-20">
+                        Ethics & Integrity
+                      </h3>
+                      <p class="service__text text-dark">
+                        We conduct our business transparently, respectfully, and
+                        strictly adhere to legal and ethical standards. This
+                        commitment builds trust-based relationships with
+                        clients, partners, and employees, reinforcing our
+                        reputation as a dependable and principled industry
+                        leader.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="layout-pt-lg layout-pb-xl md:pb-64 bg-tough-pink">
+            <div class="container">
+              <div
+                class="row no-gutters align-items-end justify-content-center"
+              >
+                <div class="col-xl-5 col-lg-6">
+                  <div class="about-me">
+                    <div
+                      class="ratio ratio-29:33 bg-image js-lazy"
+                      data-bg="img/dynex-photo-bank/arabsstock_78016_large.jpg"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-6">
+                  <div class="ml-minus-col-1 mb-minus-lg1 md:ml-0 md:mb-0">
+                    <div
+                      class="sectionHeading -left-line bg-beige-dark py-80 px-64 sm:py-48 sm:px-32"
+                    >
+                      <!-- <span class="sectionHeading__subtitle text-white">About Us</span> -->
+                      <h2 class="sectionHeading__title text-white">
+                        What Sets Us Apart
+                      </h2>
+                      <p class="sectionHeading__text text-white mt-20">
+                        DYNEX Arabia stands out with on-time, high-quality
+                        project delivery backed by deep technical expertise and
+                        strong financials. This makes us a preferred,
+                        future-ready partner and keeps us ahead in the
+                        marketspace.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Team starts -->
+          <section
+            class="layout-pt-md layout-pb-md bg-tough-pink"
+            id="leadership-team"
+          >
+            <div class="container">
+              <div class="row justify-content-center md:justify-content-start">
+                <div class="col-auto">
+                  <div
+                    class="sectionHeading -top-line -md text-center md:text-left"
+                  >
+                    <!-- <span class="sectionHeading__subtitle">PROFESSIONALS</span> -->
+                    <h2 class="sectionHeading__title">Leadership Team</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row layout-pt-sm">
+                <div
+                  class="sectionSlider overflow-hidden sm:px-16 js-sectionSlider"
+                  data-gap="30"
+                  data-slider-col="lg-3 md-2 sm-2"
+                  data-pagination
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="team -hover">
+                        <div
+                          data-anim="img-right cover-black"
+                          class="team__image"
+                        >
+                          <div>
+                            <div
+                              class="ratio ratio-3:4 bg-image js-lazy"
+                              data-bg="img/team/team-2.jpg"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="team__content">
+                          <div class="team__socials">
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                          </div>
+
+                          <div class="md:d-none">
+                            <h3 class="team__title text-white">
+                              Fadi Al-Akkam
+                            </h3>
+
+                            <div class="team__info">
+                              Chief Executive Officer
+                            </div>
+
+                            <ul
+                              class="team__details text-white"
+                              style="
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                                line-height: 1.4;
+                              "
+                            >
+                              <li>
+                                Joined DYNEX Arabia since its establishment in
+                                2011.
+                              </li>
+                              <li>
+                                Over 24 years of experience in diverse business
+                                sectors, mainly Oil & Gas.
+                              </li>
+                              <li>
+                                Responsible for effectively managing and leading
+                                the company’s growth and business performance.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="team -hover">
+                        <div
+                          data-anim="img-right cover-black"
+                          class="team__image"
+                        >
+                          <div>
+                            <div
+                              class="ratio ratio-3:4 bg-image js-lazy"
+                              data-bg="img/team/team-2.jpg"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="team__content">
+                          <div class="team__socials">
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                          </div>
+
+                          <div class="md:d-none">
+                            <h3 class="team__title text-white">
+                              Raed Al-Suraihi
+                            </h3>
+
+                            <div class="team__info">
+                              Chief Operating Officer
+                            </div>
+
+                            <ul
+                              class="team__details text-white"
+                              style="
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                                line-height: 1.4;
+                              "
+                            >
+                              <li>Joined DYNEX Arabia in 2023</li>
+                              <li>
+                                +19 years of industry experience incl.18 years
+                                at Saudi Aramco in various engineering and
+                                leadership roles
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="team -hover">
+                        <div
+                          data-anim="img-right cover-black"
+                          class="team__image"
+                        >
+                          <div>
+                            <div
+                              class="ratio ratio-3:4 bg-image js-lazy"
+                              data-bg="img/team/team-2.jpg"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="team__content">
+                          <div class="team__socials">
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                          </div>
+
+                          <div class="md:d-none">
+                            <h3 class="team__title text-white">
+                              Muhammad Zubair Ali
+                            </h3>
+
+                            <div class="team__info">
+                              Procurement & Support Services Director
+                            </div>
+
+                            <ul
+                              class="team__details text-white"
+                              style="
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                                line-height: 1.4;
+                              "
+                            >
+                              <li>Joined DYNEX Arabia in 2024</li>
+                              <li>
+                                +15 years of Oil & Gas EPC projects experience
+                                related to procurement & subcontracts
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="team -hover">
+                        <div
+                          data-anim="img-right cover-black"
+                          class="team__image"
+                        >
+                          <div>
+                            <div
+                              class="ratio ratio-3:4 bg-image js-lazy"
+                              data-bg="img/team/team-2.jpg"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="team__content">
+                          <div class="team__socials">
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a data-barba href="#" class="text-white">
+                              <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                          </div>
+
+                          <div class="md:d-none">
+                            <h3 class="team__title text-white">
+                              Mansur Ahamed
+                            </h3>
+
+                            <div class="team__info">
+                              Engineering & Tendering Director
+                            </div>
+
+                            <ul
+                              class="team__details text-white"
+                              style="
+                                margin-top: 10px;
+                                font-size: 0.9rem;
+                                line-height: 1.4;
+                              "
+                            >
+                              <li>Joined DYNEX Arabia in 2015</li>
+                              <li>
+                                +20 years of Oil & Gas EPC projects experience
+                                related to project management
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="nav -slider lg:d-none">
+                    <div class="nav__item -left js-prev">
+                      <i class="icon icon-left-arrow"></i>
+                    </div>
+
+                    <div class="nav__item -right js-next">
+                      <i class="icon icon-right-arrow"></i>
+                    </div>
+                  </div>
+
+                  <div class="pagination -slider mt-48 js-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Team End -->
+
+          <footer class="footer -type-1 bg-black">
+            <div class="footer__top">
+              <div class="container">
+                <div class="row y-gap-48 justify-content-between">
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">Contact Us</h3>
+
+                      <div class="footer__content pr-20">
+                        <div class="footer__content__item">
+                          <p>
+                            <span
+                              ><i
+                                class="fa fa-phone footer-icon"
+                                aria-hidden="true"
+                              ></i
+                            ></span>
+                            <a href="tel:+966138873800" target="_blank"
+                              >+966 13 887 3800</a
+                            >
+                          </p>
+                        </div>
+                        <div class="footer__content__item">
+                          <p>
+                            <span
+                              ><i
+                                class="fa fa-envelope footer-icon"
+                                aria-hidden="true"
+                              ></i></span
+                            ><a href="mailto:hi@dynex.com" target="_blank"
+                              >hi@dynex.com</a
+                            >
+                          </p>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <p>
+                            <span
+                              ><i
+                                class="fa fa-map-marker footer-icon"
+                                aria-hidden="true"
+                              ></i></span
+                            ><a
+                              href="https://maps.app.goo.gl/FEUxnG8ikkJF1xDf9"
+                              target="_blank"
+                            >
+                              DYNEX Arabia Head Office<br />
+                              7804 King Fahd Road, 5257, Al Hizam Al Thahabi, Al
+                              Khobar 34432, Saudi Arabia
+                            </a>
+                          </p>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="people-and-culture.html#carrer">Careers</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="#">Blogs</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">USEFUL LINKS</h3>
+                      <div class="footer__content">
+                        <div class="footer__content__item">
+                          <a href="index.html">Home</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="about-us.html">About Us</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="our-solutions.html">Our Solutions</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="our-projects.html">Our Projects</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="sustainability.html">Sustainability</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="people-and-culture.html">People & Culture</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="contact.html">Contact Us</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">OUR SOLUTIONS</h3>
+
+                      <div class="footer__content">
+                        <div class="footer__content__item">
+                          <a href="our-solutions.html#solution?tab=pipeline"
+                            >Pipeline Construction</a
+                          >
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a
+                            href="our-solutions.html#solution?tab=infrastructure"
+                            >Infrastructure and Energy Solution</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">QUICK LINKS</h3>
+
+                      <div class="footer__content">
+                        <div class="footer__content__item">
+                          <a href="people-and-culture.html#carrer"
+                            >Internships</a
+                          >
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="contact.html">Become Our Client</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="contact.html">Become Our Partner</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="media.html#newsroom">Media</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer__bottom">
+              <div class="container">
+                <div
+                  class="row align-items-center justify-content-between sm:justify-content-start"
+                >
+                  <div class="col-auto sm:order-2">
+                    <div class="footer__bottom_text">
+                      © 2025 Dynex. All rights reserved.
+                    </div>
+                  </div>
+
+                  <div class="col-auto sm:order-1">
+                    <div class="footer__logo">
+                      <img src="img/general/logo.png" alt="logo" />
+                    </div>
+                  </div>
+
+                  <div class="col-auto sm:d-none">
+                    <div class="footer__bottom_text">
+                      Designed & Developed by SIFA Consuting
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-cursor class="backButton js-backButton">
+              <div class="nav -slider">
+                <div class="nav__item -left">
+                  <i class="icon icon-right-arrow"></i>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <!-- barba container end -->
+
+    <!-- JavaScript -->
+    <script
+      src="../../../unpkg.com/leaflet%401.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap-min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/section.js"></script>
+    <script>
+      const cards = document.querySelectorAll(
+        ".tc-projects-style7 .project-card"
+      );
+
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          cards.forEach((c) => {
+            const info = c.querySelector(".info");
+            if (c !== card) {
+              info.style.opacity = "0";
+              info.style.pointerEvents = "none";
+            } else {
+              info.style.opacity = "1";
+              info.style.pointerEvents = "auto";
+            }
+          });
+        });
+
+        card.addEventListener("mouseleave", () => {
+          cards.forEach((c) => {
+            const info = c.querySelector(".info");
+            info.style.opacity = "1";
+            info.style.pointerEvents = "auto";
+          });
+        });
+      });
+    </script>
+
+    <!-- Scroll to Top Arrow -->
+    <div class="scroll-to-top" id="scroll-to-top">
+      <i class="icon icon-right-arrow"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollDownBtn = document.querySelector("#scroll-trigger"); // may be null if commented
+        const scrollUpBtn = document.querySelector("#scroll-to-top");
+        const sections = Array.from(document.querySelectorAll("section"));
+
+        // Scroll to next section from hero (only if down arrow exists)
+        if (scrollDownBtn) {
+          scrollDownBtn.addEventListener("click", function () {
+            const currentScroll = window.scrollY;
+            const nextSection = sections.find(
+              (section) => section.offsetTop > currentScroll + 10
+            );
+            if (nextSection) {
+              nextSection.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        }
+
+        // Scroll to top when up arrow is clicked
+        scrollUpBtn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // Show/hide arrows on scroll
+        window.addEventListener("scroll", function () {
+          const scrollY = window.scrollY;
+          const heroHeight = sections[0]?.offsetHeight || 600;
+
+          // Show up arrow after leaving hero
+          if (scrollY >= heroHeight - 100) {
+            scrollUpBtn.classList.add("show");
+            if (scrollDownBtn) scrollDownBtn.style.display = "none";
+          } else {
+            scrollUpBtn.classList.remove("show");
+            if (scrollDownBtn) scrollDownBtn.style.display = "flex";
+          }
+        });
+      });
+    </script>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector(".header");
+            const nav = document.querySelector(".nav");
+            const sidebarOpenButtons = document.querySelectorAll(".js-sidebar-open, .js-nav-open");
+
+            let isHovering = false;
+            let timeout;
+
+            function showNavbar() {
+                clearTimeout(timeout);
+                header.classList.add("nav-open");
+            }
+
+            function hideNavbarWithDelay() {
+                timeout = setTimeout(() => {
+                    if (!isHovering) {
+                        header.classList.remove("nav-open");
+                    }
+                }, 200); 
+            }
+
+            sidebarOpenButtons.forEach(button => {
+                button.addEventListener("mouseenter", () => {
+                    isHovering = true;
+                    showNavbar();
+                });
+
+                button.addEventListener("mouseleave", () => {
+                    isHovering = false;
+                    hideNavbarWithDelay();
+                });
+            });
+
+            nav.addEventListener("mouseenter", () => {
+                isHovering = true;
+                showNavbar();
+            });
+
+            nav.addEventListener("mouseleave", () => {
+                isHovering = false;
+                hideNavbarWithDelay();
+            });
+        });
+    </script> -->
+  </body>
+</html>

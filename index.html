@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../../../unpkg.com/leaflet%401.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/vendors.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/section.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/general/favicon.ico" />
+
+    <title>Dynex</title>
+  </head>
+
+  <body class="preloader-visible">
+    <!-- preloader start -->
+    <div class="preloader js-preloader">
+      <div class="preloader__bg"></div>
+
+      <div class="preloader__progress desktop">
+        <div class="preloader__progress__inner"></div>
+        <video
+          src="img/general/dynex-logo.mp4"
+          class="preloader__video"
+          autoplay
+          muted
+          playsinline
+          loop
+        ></video>
+      </div>
+
+      <div class="preloader__progress mobile">
+        <div class="preloader__progress__inner"></div>
+        <video
+          src="img/general/dynex-mobile.mp4"
+          class="preloader__video"
+          autoplay
+          muted
+          playsinline
+          loop
+        ></video>
+      </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- cursor start -->
+    <div class="cursor js-cursor">
+      <div class="cursor__wrapper">
+        <div class="cursor__follower js-follower"></div>
+        <div class="cursor__label js-label"></div>
+        <div class="cursor__icon js-icon"></div>
+      </div>
+    </div>
+    <!-- cursor end -->
+
+    <!-- barba container start -->
+    <div class="page-content">
+      <main class="main-content" id="main">
+        <header class="header js-header">
+          <div class="header__bar js-header-bar">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-auto z-5 sm:pos-unset js-header-item index-icon">
+                <div class="header__icons__index">
+                  <div class="header__menu">
+                    <button
+                      type="button"
+                      class="nav-button-open md:d-none js-sidebar-open"
+                    >
+                      <img
+                        src="img/general/favicon.ico"
+                        alt="Logo"
+                        class="hamburger-logo"
+                      />
+                      <i class="fa fa-solid fa-bars fa-2x"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- New menu icon -->
+              <div
+                class="col-12 col-sm-auto z-5 js-header-item d-flex align-items-center justify-content-between"
+              >
+                <!-- Logo -->
+                <div class="header__item -margin-sm">
+                  <div class="header__logo text-white js-header-logo">
+                    <a href="index.html">
+                      <img src="img/general/logo.png" alt="Logo" />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Mobile Hamburger - visible only on mobile -->
+                <div class="mobile-bars">
+                  <button
+                    type="button"
+                    class="nav-button-open js-nav-open"
+                    aria-label="Open Menu"
+                  >
+                    <img
+                      src="img/general/favicon.ico"
+                      alt="Logo"
+                      class="hamburger-logo"
+                    />
+                    <i class="fa fa-solid fa-bars fa-2x"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="nav-button-close d-none md:d-block pointer-events-none js-nav-close"
+                  >
+                    <i class="icon text-white icon-cross"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- New menu icon -->
+              <div class="menu js-menu">
+                <div class="mobile__background js-mobile-bg"></div>
+                <div class="menu__container">
+                  <div
+                    class="mobile__back js-nav-list-back pointer-events-none"
+                  >
+                    <a href="index.html">Home</a>
+                  </div>
+                  <ul class="nav js-navList">
+                    <li class="text-white menu-item-has-children active">
+                      <a href="index.html">Home</a>
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="index.html#our-story">Our Story</a>
+                        </li>
+                        <li class="nav__submenu_item">
+                          <a href="index.html#services">Our Solutions</a>
+                        </li>
+                        <li class="nav__submenu_item">
+                          <a href="index.html#client">Client & Partners</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="about-us.html">About Us</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#dynex-story"
+                            >Dynex Arabia Story</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#purpose">Our Purpose</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#core-values"
+                            >Our Core Values</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="about-us.html#leadership-team"
+                            >Leadership Team</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="our-solutions.html">Our Solutions</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="our-solutions.html#solution"
+                            >What we offer</a
+                          >
+                        </li>
+                        <li class="nav__submenu_item">
+                          <a href="our-solutions.html#innovation"
+                            >Innovation & Technology</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="our-projects.html">Our Projects</a>
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="our-projects.html#projects"
+                            >Completed and Ongoing Projects</a
+                          >
+                        </li>
+                        <li class="nav__submenu_item">
+                          <a href="our-projects.html#client"
+                            >Clients & Partners</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="sustainability.html">Sustainability</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="sustainability.html#statistics"
+                            >Statistics</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="sustainability.html#standards"
+                            >Quality Standards</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="sustainability.html#responsibility"
+                            >Responsibilities</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="people-and-culture.html">People and Culture</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="people-and-culture.html#our-people"
+                            >Our People</a
+                          >
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="people-and-culture.html#carrer">Careers</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="people-and-culture.html#welfare">Welfare</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white menu-item-has-children">
+                      <a href="media.html">Media</a>
+
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu_item">
+                          <a href="media.html#newsroom">Newsroom</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="media.html">Brand Guideline</a>
+                        </li>
+
+                        <li class="nav__submenu_item">
+                          <a href="media.html#library">Photos Library</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-white">
+                      <a>العربية</a>
+                      <!-- <div class="lang-btn">
+                        <button><a href="#">العربية</a></button>
+                      </div> -->
+                    </li>
+                    <li class="text-white">
+                      <a href="contact.html" class="contact-btn"> Contact Us</a>
+                    </li>
+                  </ul>
+
+                  <!-- <div class="nav-buttons">
+                  
+                  </div> -->
+                </div>
+
+                <div class="mobile__footer js-mobile-footer">
+                  <div class="mobile__socials">
+                    <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header end -->
+
+        <div class="content-wrapper js-content-wrapper">
+          <!-- hero section -->
+          <section
+            data-anim-wrap
+            class="mainSlider -type-7 -type-all swiper-container bg-beige-dark js-mainSlider-type-all"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  data-parallax="0.6"
+                  class="masthead__image"
+                  data-swiper-parallax="40%"
+                >
+                  <img
+                    data-parallax-target
+                    class="swiper-lazy"
+                    src="img/dynex-photo-bank/1294103185.jpeg"
+                    alt="Slider image"
+                  />
+                </div>
+                <div class="container">
+                  <div class="row no-gutters">
+                    <div class="col-lg-6 title-content">
+                      <div class="mainSlider__content js-content">
+                        <div
+                          data-split="lines"
+                          data-anim="split-lines"
+                          class="js-title-wrap"
+                        >
+                          <h1 class="masthead__title text-white js-title">
+                            We Promote <span>Innovation</span>
+                          </h1>
+                        </div>
+                        <div class="masthead__button js-button">
+                          <a
+                            href="our-projects.html"
+                            class="button -simple text-white"
+                          >
+                            VIEW PROJECT
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="row no-gutters">
+                    <div class="col-lg-6 title-content">
+                      <div class="mainSlider__content js-content">
+                        <div data-split="lines" class="js-title-wrap">
+                          <h1 class="masthead__title text-white js-title">
+                            We Build <span>Connections</span>
+                          </h1>
+                        </div>
+                        <div class="masthead__button js-button">
+                          <a
+                            href="about-us.html#leadership-team"
+                            class="button -simple text-white"
+                          >
+                            LEADERSHIP TEAM
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="mainSlider__image js-all-item"
+                  data-parallax="0.6"
+                  data-swiper-parallax="60%"
+                >
+                  <!-- Desktop Image -->
+                  <img
+                    class="swiper-lazy d-block sm:d-none"
+                    data-parallax-target
+                    src="img/dynex-photo-bank/New folder/AdobeStock_504882319_16-6-X-Large.jpeg"
+                    alt="Slider image"
+                  />
+
+                  <!-- Mobile Image -->
+                  <img
+                    class="swiper-lazy d-none sm:d-block"
+                    data-parallax-target
+                    src="img/dynex-photo-bank/New folder/hero-slide-2.png"
+                    alt="Slider image"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="row no-gutters">
+                    <div class="col-lg-6 title-content">
+                      <div class="mainSlider__content js-content">
+                        <div data-split="lines" class="js-title-wrap">
+                          <h1 class="masthead__title text-white js-title">
+                            We Shape <span>Legacies</span>
+                          </h1>
+                        </div>
+                        <div class="masthead__button js-button">
+                          <a
+                            href="about-us.html#core-values"
+                            class="button -simple text-white"
+                          >
+                            OUR CORE VALUES
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="mainSlider__image js-all-item"
+                  data-parallax="0.6"
+                  data-swiper-parallax="60%"
+                >
+                  <img
+                    class="swiper-lazy"
+                    data-parallax-target
+                    src="img/dynex-photo-bank/shutterstock_1785976883.jpg"
+                    alt="Slider image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination -slider -white js-pagination"></div>
+          </section>
+
+          <section
+            id="counter-section"
+            class="layout-pt-md layout-pb-md bg-secondary counter-bg py-5"
+          >
+            <div class="container">
+              <!-- Section Heading -->
+              <div class="row mb-5">
+                <div class="col-12 text-center">
+                  <div class="sectionHeading -top-line">
+                    <span class="sectionHeading__subtitle subtitle-dark">
+                      We build more than infrastructure; We lay the foundations
+                      of the future.
+                    </span>
+                    <h2 class="sectionHeading__title title-dark">
+                      We Are <strong>DYNEX Arabia</strong>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Counter Cards -->
+              <div class="row gx-4 gy-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                  <div class="counter-card text-center">
+                    <i class="fa fa-solid fa-shield counter-icon"></i>
+                    <div class="counter-line">
+                      <div
+                        class="counter-number js-counter-num"
+                        data-counter="10000000"
+                      >
+                        0
+                      </div>
+                      <div class="counter-unit">+ hrs</div>
+                    </div>
+                    <div class="counter-title">Zero Injury Hours Completed</div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                  <div class="counter-card text-center">
+                    <i class="fa fa-solid fa-road counter-icon"></i>
+                    <div class="counter-line">
+                      <div
+                        class="counter-number js-counter-num"
+                        data-counter="340"
+                      >
+                        0
+                      </div>
+                      <div class="counter-unit">+ km</div>
+                    </div>
+                    <div class="counter-title">Pipelines Installed</div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                  <div class="counter-card text-center">
+                    <i class="fa fa-solid fa-users counter-icon"></i>
+                    <div class="counter-line">
+                      <div
+                        class="counter-number js-counter-num"
+                        data-counter="3000"
+                      >
+                        0
+                      </div>
+                      <div class="counter-unit">+</div>
+                    </div>
+                    <div class="counter-title">Employees Worldwide</div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                  <div class="counter-card text-center">
+                    <i class="fa fa-solid fa-leaf counter-icon"></i>
+                    <div class="counter-line">
+                      <div
+                        class="counter-number js-counter-num"
+                        data-counter="44"
+                      >
+                        0
+                      </div>
+                      <div class="counter-unit">+ M tons</div>
+                    </div>
+                    <div class="counter-title">
+                      CO₂ Captured Annually by 2035
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- about -->
+          <section
+            class="relative layout-pt-lg layout-pb-lg bg-beige-dark d-block sm:d-none"
+            id="our-story"
+          >
+            <div class="section-bg-image col-lg-8 px-0">
+              <div
+                class="bg-image js-lazy"
+                data-bg="img/dynex-photo-bank/New folder/DeWatermark.ai_1754950290567.png"
+              ></div>
+            </div>
+
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-5 offset-xl-6 col-lg-6 offset-lg-6">
+                  <div
+                    data-anim="slide-left"
+                    class="sectionHeading -left-line bg-white py-80 px-64 sm:py-64 sm:px-48"
+                  >
+                    <span class="sectionHeading__subtitle text-dark"
+                      >OUR STORY</span
+                    >
+                    <h2 class="sectionHeading__title text-dark">
+                      We are a 100% Saudi-owned LSTK-EPC contractor.
+                    </h2>
+                    <p class="sectionHeading__text text-dark">
+                      We take pride in being part of Al-Awael Group, which is
+                      owned by the Al-Rashid Group (RAR). We specialize in
+                      constructing pipelines and ancillary facilities for Saudi
+                      Arabia's vital O&G, energy and water sectors.
+                    </p>
+                    <div class="sectionHeading__button">
+                      <a
+                        href="about-us.html"
+                        class="button -md -dark text-white"
+                        >About us</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="layout-pt-lg layout-pb-xl md:pb-64 bg-tough-pink d-none sm:d-block"
+          >
+            <div class="container">
+              <div
+                class="row no-gutters align-items-end justify-content-center"
+              >
+                <div class="col-xl-5 col-lg-6">
+                  <div class="about-me">
+                    <div
+                      class="ratio ratio-29:33 bg-image js-lazy"
+                      data-bg="img/dynex-photo-bank/New folder/DeWatermark.ai_1754950290567.png"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-6">
+                  <div class="ml-minus-col-1 mb-minus-lg md:ml-0 md:mb-0">
+                    <div
+                      class="sectionHeading -left-line bg-beige-dark py-80 px-64 sm:py-48 sm:px-32"
+                    >
+                      <span class="sectionHeading__subtitle text-white"
+                        >OUR STORY</span
+                      >
+                      <h2 class="sectionHeading__title text-white">
+                        We are a 100% Saudi-owned LSTK-EPC contractor.
+                      </h2>
+                      <p class="sectionHeading__text text-white mt-20">
+                        We take pride in being part of Al-Awael Group, which is
+                        owned by the Al-Rashid Group (RAR). We specialize in
+                        constructing pipelines and ancillary facilities for
+                        Saudi Arabia's vital O&G, energy and water sectors.
+                      </p>
+                      <div class="sectionHeading__button">
+                        <a
+                          href="about-us.html"
+                          class="button -md -dark text-white"
+                          >About us</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- services -->
+          <section class="bg-secondary layout-pt-md" id="services">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="sectionHeading -top-line text-center">
+                    <span class="sectionHeading__subtitle text-dark"
+                      >WHAT WE OFFER</span
+                    >
+                    <h2 class="sectionHeading__title text-dark">
+                      Our Solutions
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tc-projects-style7 layout-pt-sm bg-secondary">
+            <div class="projects-content">
+              <!-- Tab Buttons -->
+              <div class="project-tabs text-center mb-40">
+                <button class="project-tab active" data-category="pipeline">
+                  Pipeline Construction
+                </button>
+                <button class="project-tab" data-category="infrastructure">
+                  Infrastructure & Energy Solutions
+                </button>
+              </div>
+
+              <!-- Swiper -->
+              <div class="projects-slider swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slides will be injected here via JS -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Background images -->
+                <div class="glry-img">
+                  <img
+                    id="tab-1"
+                    src="img/dynex-photo-bank/Engineer-inspecting-the-industrial-pipeline.jpg"
+                    alt=""
+                    class="tab-img"
+                  />
+
+                  <img
+                    id="tab-2"
+                    src="img/dynex-photo-bank/shutterstock_110500661.jpg"
+                    alt=""
+                    class="tab-img"
+                  />
+
+                  <img
+                    id="tab-3"
+                    src="img/dynex-photo-bank/shutterstock_1831612183.jpg"
+                    alt=""
+                    class="tab-img"
+                  />
+
+                  <img
+                    id="tab-4"
+                    src="img/dynex-photo-bank/engineers-walking-by-gas-pipelines-scaled.png"
+                    alt=""
+                    class="tab-img"
+                  />
+
+                  <img
+                    id="tab-5"
+                    src="img/dynex-photo-bank/shutterstock_1785972483.jpg"
+                    alt=""
+                    class="tab-img"
+                  />
+
+                  <img
+                    id="tab-6"
+                    src="img/dynex-photo-bank/Untitled-1.jpg"
+                    alt=""
+                    class="tab-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Hidden Slides Template -->
+            <div class="swiper-slide-template" style="display: none">
+              <div
+                class="swiper-slide"
+                data-tab="tab-1"
+                data-category="pipeline"
+              >
+                <a href="our-solutions.html" class="project-card">
+                  <div class="info">
+                    <h4 class="fsz-28 text-uppercase mb-3 text-white">
+                      O&G and Water Pipeline Installation
+                    </h4>
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-tab="tab-2"
+                data-category="pipeline"
+              >
+                <a href="our-solutions.html" class="project-card">
+                  <div class="info">
+                    <h4 class="fsz-28 text-uppercase mb-3 text-white">
+                      High-Voltage and Low-Voltage Cable Works
+                    </h4>
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-tab="tab-3"
+                data-category="pipeline"
+              >
+                <a href="our-solutions.html" class="project-card">
+                  <div class="info">
+                    <h4 class="fsz-28 text-uppercase mb-3 text-white">
+                      Micro-Tunnelling & Horizontal Directional Drilling
+                    </h4>
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-tab="tab-4"
+                data-category="infrastructure"
+              >
+                <a href="our-solutions.html" class="project-card">
+                  <div class="info">
+                    <h4 class="fsz-28 text-uppercase mb-3 text-white">
+                      Mechanical and Facility Installations
+                    </h4>
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-tab="tab-5"
+                data-category="infrastructure"
+              >
+                <a href="our-solutions.html" class="project-card">
+                  <div class="info">
+                    <h4 class="fsz-28 text-uppercase mb-3 text-white">
+                      Water Transmission Line Construction
+                    </h4>
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-tab="tab-6"
+                data-category="infrastructure"
+              >
+                <a href="our-solutions.html" class="project-card">
+                  <div class="info">
+                    <h4 class="fsz-28 text-uppercase mb-3 text-white">
+                      Environmentally Sustainable Project Delivery
+                    </h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA-->
+          <section class="career-cta bg-beige-dark pattern_bg_2 mt-50">
+            <div class="container">
+              <div class="row justify-content-center text-center">
+                <div class="col-lg-7">
+                  <div class="pr-80 md:pr-0">
+                    <div
+                      data-anim="img-right img-cover-black"
+                      class="ratio ratio-4:3 bg-image js-lazy"
+                      data-bg="img/dynex-photo-bank/shutterstock_1973700011.jpg"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="col-xl-5 col-lg-6 col-md-12 d-flex align-items-center"
+                >
+                  <div class="cta">
+                    <h2 class="cta__title text-white">
+                      Start your career with us
+                    </h2>
+
+                    <p class="cta__text px-0 text-white">
+                      Every expert was once a beginner! We’re always on the
+                      lookout for enthusiastic, curious, and dependable interns
+                      ready to grow with us.
+                    </p>
+
+                    <div class="cta__button">
+                      <a href="contact.html" class="button -md -dark text-white"
+                        >Join Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- clients -->
+          <section
+            class="layout-pt-md layout-pb-md bg-secondary pattern_bg_2"
+            id="client"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="sectionHeading -top-line text-center">
+                    <h2 class="sectionHeading__title text-dark">
+                      Clients and Partners
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="clients-row d-flex flex-wrap gap-3">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="clients">
+                    <div class="clients__image">
+                      <img src="img/clients/client-1.svg" alt="clients image" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="clients">
+                    <div class="clients__image">
+                      <img src="img/clients/client-4.png" alt="clients image" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="clients">
+                    <div class="clients__image">
+                      <img src="img/clients/client-3.png" alt="clients image" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="clients">
+                    <div class="clients__image1">
+                      <img src="img/clients/client-2.png" alt="clients image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer -type-1 bg-black">
+            <div class="footer__top">
+              <div class="container">
+                <div class="row y-gap-48 justify-content-between">
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">Contact Us</h3>
+
+                      <div class="footer__content pr-20">
+                        <div class="footer__content__item">
+                          <p>
+                            <span
+                              ><i
+                                class="fa fa-phone footer-icon"
+                                aria-hidden="true"
+                              ></i
+                            ></span>
+                            <a href="tel:+966138873800" target="_blank"
+                              >+966 13 887 3800</a
+                            >
+                          </p>
+                        </div>
+                        <div class="footer__content__item">
+                          <p>
+                            <span
+                              ><i
+                                class="fa fa-envelope footer-icon"
+                                aria-hidden="true"
+                              ></i></span
+                            ><a href="mailto:hi@dynex.com" target="_blank"
+                              >hi@dynex.com</a
+                            >
+                          </p>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <p>
+                            <span
+                              ><i
+                                class="fa fa-map-marker footer-icon"
+                                aria-hidden="true"
+                              ></i></span
+                            ><a
+                              href="https://maps.app.goo.gl/FEUxnG8ikkJF1xDf9"
+                              target="_blank"
+                            >
+                              DYNEX Arabia Head Office<br />
+                              7804 King Fahd Road, 5257, Al Hizam Al Thahabi, Al
+                              Khobar 34432, Saudi Arabia
+                            </a>
+                          </p>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="people-and-culture.html#carrer">Careers</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="#">Blogs</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">USEFUL LINKS</h3>
+                      <div class="footer__content">
+                        <div class="footer__content__item">
+                          <a href="index.html">Home</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="about-us.html">About Us</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="our-solutions.html">Our Solutions</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="our-projects.html">Our Projects</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="sustainability.html">Sustainability</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="people-and-culture.html">People & Culture</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="contact.html">Contact Us</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">OUR SOLUTIONS</h3>
+
+                      <div class="footer__content">
+                        <div class="footer__content__item">
+                          <a href="our-solutions.html#solution?tab=pipeline"
+                            >Pipeline Construction</a
+                          >
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a
+                            href="our-solutions.html#solution?tab=infrastructure"
+                            >Infrastructure and Energy Solution</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer__item">
+                      <h3 class="footer__title text-white">QUICK LINKS</h3>
+
+                      <div class="footer__content">
+                        <div class="footer__content__item">
+                          <a href="people-and-culture.html#carrer"
+                            >Internships</a
+                          >
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="contact.html">Become Our Client</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="contact.html">Become Our Partner</a>
+                        </div>
+
+                        <div class="footer__content__item">
+                          <a href="media.html#newsroom">Media</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer__bottom">
+              <div class="container">
+                <div
+                  class="row align-items-center justify-content-between sm:justify-content-start"
+                >
+                  <div class="col-auto sm:order-2">
+                    <div class="footer__bottom_text">
+                      © 2025 Dynex. All rights reserved.
+                    </div>
+                  </div>
+
+                  <div class="col-auto sm:order-1">
+                    <div class="footer__logo">
+                      <img src="img/general/logo.png" alt="logo" />
+                    </div>
+                  </div>
+
+                  <div class="col-auto sm:d-none">
+                    <div class="footer__bottom_text">
+                      Designed & Developed by SIFA Consuting
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-cursor class="backButton js-backButton">
+              <div class="nav -slider">
+                <div class="nav__item -left">
+                  <i class="icon icon-right-arrow"></i>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <!-- barba container end -->
+
+    <!-- JavaScript -->
+    <script
+      src="../../../unpkg.com/leaflet%401.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap-min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/section.js"></script>
+
+    <script>
+      const cards = document.querySelectorAll(
+        ".tc-projects-style7 .project-card"
+      );
+
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          cards.forEach((c) => {
+            const info = c.querySelector(".info");
+            if (c !== card) {
+              info.style.opacity = "0";
+              info.style.pointerEvents = "none";
+            } else {
+              info.style.opacity = "1";
+              info.style.pointerEvents = "auto";
+            }
+          });
+        });
+
+        card.addEventListener("mouseleave", () => {
+          cards.forEach((c) => {
+            const info = c.querySelector(".info");
+            info.style.opacity = "1";
+            info.style.pointerEvents = "auto";
+          });
+        });
+      });
+    </script>
+
+    <!-- Scroll Down Arrow -->
+    <div class="masthead__scroll" id="scroll-trigger">
+      <div class="masthead__scroll_item">
+        <div class="masthead__scroll_icon">
+          <i class="icon icon-right-arrow"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Arrow -->
+    <div class="scroll-to-top" id="scroll-to-top">
+      <i class="icon icon-right-arrow"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollDownBtn = document.querySelector("#scroll-trigger");
+        const scrollUpBtn = document.querySelector("#scroll-to-top");
+        const sections = Array.from(document.querySelectorAll("section"));
+
+        // Scroll to next section from hero
+        scrollDownBtn.addEventListener("click", function () {
+          const currentScroll = window.scrollY;
+          const nextSection = sections.find(
+            (section) => section.offsetTop > currentScroll + 10
+          );
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+
+        // Scroll to top when up arrow is clicked
+        scrollUpBtn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // Show/hide arrows on scroll
+        window.addEventListener("scroll", function () {
+          const scrollY = window.scrollY;
+          const heroHeight = sections[0].offsetHeight;
+
+          // Show up arrow only after scrolling past hero
+          if (scrollY >= heroHeight - 100) {
+            scrollUpBtn.classList.add("show");
+            scrollDownBtn.style.display = "none";
+          } else {
+            scrollUpBtn.classList.remove("show");
+            scrollDownBtn.style.display = "flex";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
